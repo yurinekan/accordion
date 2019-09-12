@@ -1,0 +1,16 @@
+<h2 (click)="toggleAccordion()">
+  {{ name }}
+   <ion-icon name="trending-down" *ngIf="isMenuOpen"></ion-icon>
+   <ion-icon name="trending-up" *ngIf="!isMenuOpen"></ion-icon>
+</h2>
+<div
+   [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
+   	<img [src]="image" class="image-wrapper">
+
+   <p>{{ description }}</p>
+   <ion-button
+      color="secondary"
+      fill="solid"
+      size="small"
+      (click)="broadcastName(name)">Console log me!</ion-button>
+</div>
